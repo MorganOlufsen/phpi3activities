@@ -5,23 +5,27 @@
 A dead-simple PHP script to group i3workspaces into activities, similar to KDE activites but
 just for workpsaces.
 
+looks like this:
+
+![Sample image i3activities](https://raw.githubusercontent.com/MorganOlufsen/phpi3activities/main/image.png?token=GHSAT0AAAAAAB3RO4ZMJYWFNJTFO22FFVWGY4DYQRQ)
+
 ## Use case
 
-Work Project 1 (Activity)
-    workspace 1 (for example an ide with your project 1)
-	workspace 2 (terminals related to project 1)
+- Work Project 1 (Activity)
+	- workspace 1 (for example an ide with your project 1)
+	- workspace 2 (terminals related to project 1)
 
-Project 2 (Activity)
-    workspace 1 (for example an ide with your project 2)
-	workspace 2 (terminals related to project 2)
+- Project 2 (Activity)
+    - workspace 1 (for example an ide with your project 2)
+	- workspace 2 (terminals related to project 2)
 
-Personal (Activity)
-	workspace 1 (watever)
-	workspace 2 (watever)
+- Personal (Activity)
+	- workspace 1 (watever)
+	- workspace 2 (watever)
 
-All Activities workspaces
-	workspace 7 (mail)
-	workspace 8 (docs)
+- All Activities workspaces
+	- workspace 7 (mail)
+	- workspace 8 (docs)
 
 ## Usage
 
