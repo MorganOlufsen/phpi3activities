@@ -1,0 +1,68 @@
+#!/usr/bin/php
+<?php
+
+$excludes = array(
+	'5' => 'gimp',
+	'6' => 'www',
+	'7' => 'mail',
+	'8' => 'docs',
+	'9' => 'media',
+	'10' => 'game',
+);
+
+
+function send_command($command){
+	$cn = "i3-msg '$command'";
+	echo $cn;
+	exec($cn);
+}
+
+$command = $argv[1];
+$project_file = $_SERVER['HOME'].'/.i3_project';
+
+if( $command == 'set_project' ){
+	$project = $argv[2];
+	echo "Setting current project to $project...\n";
+	file_put_contents($project_file,$argv[2]);
+}
+
+
+if( $command == 'focus' ){
+	$tag = $argv[2];
+	$project = file_get_contents( $project_file );
+
+	if( $project && $project != '0' ){
+		$tag_name = $project."0".$tag;
+	}else{
+		$tag_name = $tag;
+	}
+
+	$tag_name = $tag_name.":".$tag;
+
+	if( $excludes[$tag] ){
+		$tag_name = $excludes[$tag];
+	}
+
+
+	send_command("workspace $tag_name");
+}
+
+if( $command == 'move_to' ){
+	$tag = $argv[2];
+	$project = file_get_contents( $project_file );
+	if( $project && $project != '0' ){
+		$tag_name = $project."0".$tag;
+	}else{
+		$tag_name = $tag;
+	}
+
+	$tag_name = $tag_name.":".$tag;
+
+	if( $excludes[$tag] ){
+		$tag_name = $excludes[$tag];
+	}
+
+
+	send_command("move container to workspace $tag_name");
+}
+
