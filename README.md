@@ -29,9 +29,9 @@ looks like this:
 
 ## Usage
 
-[mod]+[n] : Swith to workspace [n] in current selected activity
-[mod]+[shift]+[n] : Send current window to workspace [n] in current selected activity
-[mod]+[ctrl]+[n] : select current activity, set it to [n]
+- [mod]+[n] : Swith to workspace [n] in current selected activity
+- [mod]+[shift]+[n] : Send current window to workspace [n] in current selected activity
+- [mod]+[ctrl]+[n] : select current activity, set it to [n]
 
 
 ## Requirements
@@ -40,11 +40,10 @@ PHP, i3
 
 ## installation
 
-Install php-cli
-Download i3control
-chmod u+x i3control
-
-Move that file into your $PATH, or just use a full file route on "Configuration i3"
+- Install php-cli
+- Download i3control
+- chmod u+x i3control
+- Move that file into your $PATH, or just use a full file route on "Configuration i3"
 
 ## Configuration, i3
 
